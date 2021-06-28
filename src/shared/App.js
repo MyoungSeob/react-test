@@ -1,10 +1,18 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import { ConnectedRouter } from "connected-react-router";
+import { history } from "../redux/configStore";
 
 function App() {
   return (
-    <div>
-      <h1>test</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <ConnectedRouter history={history}>
+          <Switch></Switch>
+        </ConnectedRouter>
+      </BrowserRouter>
+    </>
   );
 }
 
